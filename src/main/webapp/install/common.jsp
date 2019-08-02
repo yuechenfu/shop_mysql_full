@@ -32,7 +32,7 @@
 	public String resolveJdbcDriver(DatabaseType databaseType) {
 		switch (databaseType) {
 			case MYSQL:
-				return "com.mysql.jdbc.Driver";
+				return "com.mysql.cj.jdbc.Driver";
 			case SQLSERVER:
 				return "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 			case ORACLE:
@@ -45,7 +45,7 @@
 	public String resolveJdbcUrl(DatabaseType databaseType, String databaseHost, String databasePort, String databaseName) {
 		switch (databaseType) {
 			case MYSQL:
-				return String.format("jdbc:mysql://%s:%s/%s?useUnicode=true&characterEncoding=UTF-8", databaseHost, databasePort, databaseName);
+				return String.format("jdbc:mysql://%s:%s/%s?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8", databaseHost, databasePort, databaseName);
 			case SQLSERVER:
 				return String.format("jdbc:sqlserver://%s:%s;databasename=%s", databaseHost, databasePort, databaseName);
 			case ORACLE:
