@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Order
+ * Version: 6.1
+ */
+
+/* ---------- order-checkout ---------- */
+.order-checkout .main-header {
+	margin-bottom: 0px;
+}
+
+.order-checkout main {
+	padding: 10px 0px;
+	background-color: #f8f8f8;
+}
+
+.order-checkout main .panel {
+	padding: 0px 15px;
+	margin-bottom: 10px;
+	border-radius: 0px;
+	border: none;
+}
+
+.order-checkout main .panel .panel-heading {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.order-checkout main .panel .panel-body {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.order-checkout main .panel .panel-body>.form-group:last-child {
+	margin-bottom: 0px;
+}
+
+.order-checkout main .panel .panel-footer {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.order-checkout main .receiver .add-receiver {
+	width: -webkit-calc((100% - 20px * 3) / 4);
+	width: calc((100% - 20px * 3) / 4);
+	height: 120px;
+	line-height: 120px;
+	display: block;
+	float: left;
+	color: #999999;
+	font-size: 16px;
+	text-align: center;
+	outline: none;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+	background: url(../images/order.png) 0px 0px no-repeat;
+}
+
+.order-checkout main .receiver .add-receiver:hover {
+	color: #ff6900;
+}
+
+.order-checkout main .receiver .add-receiver .iconfont {
+	font-size: 16px;
+}
+
+.order-checkout main .receiver .receiver-list li {
+	width: -webkit-calc((100% - 20px * 3) / 4);
+	width: calc((100% - 20px * 3) / 4);
+	height: 120px;
+	float: left;
+	padding: 5px 15px;
+	margin-top: 20px;
+	margin-left: 20px;
+	cursor: pointer;
+	background: url(../images/order.png) 0px 0px no-repeat;
+}
+
+.order-checkout main .receiver .receiver-list li:nth-child(-n+3) {
+	margin-top: 0px;
+}
+
+.order-checkout main .receiver .receiver-list li:nth-child(4n) {
+	margin-left: -1px;
+}
+
+.order-checkout main .receiver .receiver-list li:nth-child(n+4) {
+	display: none;
+}
+
+.order-checkout main .receiver .receiver-list li.active {
+	background-position: 0px -150px;
+	background-color: #fffbf9;
+}
+
+.order-checkout main .receiver.expanded .receiver-list li {
+	display: block;
+}
+
+.order-checkout main .receiver .receiver-list li h5 {
+	line-height: 30px;
+	margin-bottom: 5px;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+	border-bottom: 1px dotted #eeeeee;
+}
+
+.order-checkout main .receiver .receiver-list li:hover h5 {
+	color: #ff6900;
+}
+
+.order-checkout main .receiver .receiver-list li.active h5 {
+	color: #ff6900;
+}
+
+.order-checkout main .receiver .receiver-list li p {
+	line-height: 24px;
+}
+
+.order-checkout main .receiver .expand-receiver:hover {
+	color: #ff6900;
+}
+
+.order-checkout main .payment-method .payment-method-list li {
+	width: -webkit-calc((100% - 20px * 5) / 6);
+	width: calc((100% - 20px * 5) / 6);
+	height: 50px;
+	line-height: 30px;
+	float: left;
+	padding: 10px;
+	margin-top: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
+	border: 1px solid #eeeeee;
+}
+
+.order-checkout main .payment-method .payment-method-list li:nth-child(-n+6) {
+	margin-top: 0px;
+}
+
+.order-checkout main .payment-method .payment-method-list li:nth-child(6n) {
+	margin-right: -1px;
+}
+
+.order-checkout main .payment-method .payment-method-list li:hover {
+	border-color: #ff6900;
+}
+
+.order-checkout main .payment-method .payment-method-list li.active {
+	position: relative;
+	border-color: #ff6900;
+}
+
+.order-checkout main .payment-method .payment-method-list li.active:before {
+	position: absolute;
+	right: -2px;
+	bottom: -11px;
+	z-index: 200;
+	content: '\e645';
+	color: #ffffff;
+	font-family: 'iconfont';
+	font-weight: bold;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.order-checkout main .payment-method .payment-method-list li.active:after {
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	z-index: 100;
+	content: '';
+	border-bottom: 15px solid #ff6900;
+	border-left: 15px solid transparent;
+}
+
+.order-checkout main .payment-method .payment-method-list li.disabled {
+	cursor: default;
+	background-color: #f8f8f8;
+}
+
+.order-checkout main .payment-method .payment-method-list li.disabled:hover {
+	border-color: #eeeeee;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li {
+	width: -webkit-calc((100% - 20px * 5) / 6);
+	width: calc((100% - 20px * 5) / 6);
+	height: 50px;
+	line-height: 30px;
+	float: left;
+	padding: 10px;
+	margin-top: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
+	border: 1px solid #eeeeee;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li:nth-child(-n+6) {
+	margin-top: 0px;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li:nth-child(6n) {
+	margin-right: -1px;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li:hover {
+	border-color: #ff6900;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li.active {
+	position: relative;
+	border-color: #ff6900;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li.active:before {
+	position: absolute;
+	right: -2px;
+	bottom: -11px;
+	z-index: 200;
+	content: '\e645';
+	color: #ffffff;
+	font-family: 'iconfont';
+	font-weight: bold;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li.active:after {
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	z-index: 100;
+	content: '';
+	border-bottom: 15px solid #ff6900;
+	border-left: 15px solid transparent;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li.disabled {
+	cursor: default;
+	background-color: #f8f8f8;
+}
+
+.order-checkout main .shipping-method .shipping-method-list li.disabled:hover {
+	border-color: #eeeeee;
+}
+
+.order-checkout main .coupon-name {
+	display: none;
+	padding: 2px 5px;
+	margin: 4px 0px;
+	color: #ff6900;
+	cursor: pointer;
+	border-radius: 3px;
+	border: solid 1px #ff6900;
+}
+
+.order-checkout main table {
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.order-checkout main table th, .order-checkout main table td {
+	padding: 10px;
+}
+
+.order-checkout main table thead th {
+	color: #666666;
+	font-weight: normal;
+	border-bottom: 10px solid #f8f8f8;
+}
+
+.order-checkout main table .order-item-group {
+	border-bottom: 10px solid #f8f8f8;
+}
+
+.order-checkout main table .order-item-group .order-item-group-heading td {
+	border-bottom: 1px solid #eeeeee;
+}
+
+.order-checkout main .summary .dl-horizontal dt {
+	line-height: 20px;
+	font-weight: normal;
+	color: #999999;
+}
+
+.order-checkout main .summary .dl-horizontal dd {
+	line-height: 20px;
+	color: #666666;
+}
+
+.order-checkout main .bar {
+	line-height: 41px;
+	background-color: #ffffff;
+}
+
+.order-checkout main .bar .back {
+	display: block;
+	text-align: center;
+	border-right: 1px solid #eeeeee;
+}
+
+.order-checkout main .bar span {
+	margin-right: 20px;
+}
+
+.order-checkout main .bar strong {
+	color: #de342f;
+	font-size: 14px;
+}
+
+.order-checkout main .bar .btn-primary {
+	border-radius: 0px;
+}
+ 
+/* ---------- payment ---------- */
+.payment .order-payment-detail {
+	padding: 40px 0px;
+}
+
+.payment .order-payment-detail .media-left .iconfont {
+	margin: 0px 20px 0px 50px;
+	padding: 8px;
+	color: #00a854;
+	font-size: 42px;
+	border-radius: 50%;
+	border: 1px solid #00a854;
+}
+
+.payment .order-payment-detail .media-body h3 {
+	line-height: 30px;
+}
+
+.payment .order-payment-detail .media-body p {
+	line-height: 60px;
+	color: #888888;
+}
+
+.payment .order-payment-detail .media-body span {
+	line-height: 30px;
+	margin-right: 10px;
+	color: #888888;
+}
+
+.payment .order-payment-detail .media-body strong {
+	font-size: 16px;
+	color: #ff6900;
+}
+
+.payment .order-payment-detail .summary {
+	display: none;
+	padding-top: 20px;
+	margin: 15px 0px 0px 140px;
+	color: #888888;
+	border-top: 1px solid #f1f1f1;
+}
+
+.payment .order-payment-detail .summary dt {
+	min-width: 60px;
+	line-height: 25px;
+	float: left;
+	clear: left;
+	font-weight: normal;
+	text-align: left;
+}
+
+.payment .order-payment-detail .summary dd {
+	line-height: 25px;
+	margin-left: 60px;
+	float: left;
+}
+
+.payment .panel-footer .payment-method {
+	padding-left: 50px;
+}

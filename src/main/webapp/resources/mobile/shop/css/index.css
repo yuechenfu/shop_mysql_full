@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Index
+ * Version: 6.1
+ */
+
+/* ---------- index ---------- */
+.index header {
+	width: 100%;
+	line-height: 30px;
+	padding: 5px 0px;
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+	text-align: center;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+	background: linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.index header .iconfont {
+	color: #ffffff;
+	font-size: 18px;
+}
+
+.index header .search-placeholder {
+	padding: 0px 10px;
+	position: relative;
+	color: #999999;
+	text-align: left;
+	opacity: 0.8;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+
+.index header .search-placeholder .icon-search {
+	position: absolute;
+	right: 10px;
+	color: #999999;
+	font-size: 14px;
+}
+
+.index header .member-info a {
+	color: #ffffff;
+}
+
+.index header .search {
+	width: 100%;
+	display: none;
+	padding: 5px 0px;
+	position: fixed;
+	top: 0px;
+	z-index: 200;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+	border-bottom: solid 1px #dddddd;
+	background-color: #ffffff;
+}
+
+.index header .search .iconfont {
+	color: #999999;
+}
+
+.index header .search .icon-search {
+	font-size: 14px;
+}
+
+.index header .search .hot-search {
+	padding: 0px 10px;
+	text-align: left;
+}
+
+.index header .search .hot-search dt {
+	line-height: 30px;
+	color: #999999;
+}
+
+.index header .search .hot-search dd {
+	float: left;
+}
+
+.index header .search .hot-search dd a {
+	display: block;
+	padding: 2px 6px;
+	margin-right: 6px;
+	margin-bottom: 6px;
+	color: #bbbbbb;
+	white-space: nowrap;
+	border-radius: 3px;
+	border: solid 1px #cccccc;
+}
+
+.index main {
+	background-color: #f8f8f8;
+}
+
+.index .bx-wrapper {
+	margin-bottom: 10px;
+}
+
+.index nav {
+	margin-bottom: 10px;
+	background-color: #ffffff;
+}
+
+.index nav a {
+	width: 25%;
+	line-height: 20px;
+	display: block;
+	float: left;
+	padding: 5px;
+	text-align: center;
+}
+
+.index nav a .iconfont {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	margin: 0px auto;
+	color: #ffffff;
+	font-size: 24px;
+	text-align: center;
+	border-radius: 50%;
+	background: -webkit-linear-gradient(top, #ff7531, #f72115);
+	background: -moz-linear-gradient(top, #ff7531, #f72115);
+	background: linear-gradient(top, #ff7531, #f72115);
+}
+
+.index nav a:nth-child(1) .iconfont {
+	background: -webkit-linear-gradient(top, #ff7531, #f72115);
+	background: -moz-linear-gradient(top, #ff7531, #f72115);
+	background: linear-gradient(top, #ff7531, #f72115);
+}
+
+.index nav a:nth-child(2) .iconfont {
+	background: -webkit-linear-gradient(top, #5accfe, #01b7fa);
+	background: -moz-linear-gradient(top, #5accfe, #01b7fa);
+	background: linear-gradient(top, #5accfe, #01b7fa);
+}
+
+.index nav a:nth-child(3) .iconfont {
+	background: -webkit-linear-gradient(top, #f8d01a, #ffa30e);
+	background: -moz-linear-gradient(top, #f8d01a, #ffa30e);
+	background: linear-gradient(top, #f8d01a, #ffa30e);
+}
+
+.index nav a:nth-child(4) .iconfont {
+	background: -webkit-linear-gradient(top, #ff65d1, #fa2596);
+	background: -moz-linear-gradient(top, #ff65d1, #fa2596);
+	background: linear-gradient(top, #ff65d1, #fa2596);
+}
+
+.index nav a:nth-child(5) .iconfont {
+	background: -webkit-linear-gradient(top, #ef93ff, #bb45fe);
+	background: -moz-linear-gradient(top, #ef93ff, #bb45fe);
+	background: linear-gradient(top, #ef93ff, #bb45fe);
+}
+
+.index nav a:nth-child(6) .iconfont {
+	background: -webkit-linear-gradient(top, #fbbd4f, #fc6343);
+	background: -moz-linear-gradient(top, #fbbd4f, #fc6343);
+	background: linear-gradient(top, #fbbd4f, #fc6343);
+}
+
+.index nav a:nth-child(7) .iconfont {
+	background: -webkit-linear-gradient(top, #1ae25b, #0ebe48);
+	background: -moz-linear-gradient(top, #1ae25b, #0ebe48);
+	background: linear-gradient(top, #1ae25b, #0ebe48);
+}
+
+.index nav a:nth-child(8) .iconfont {
+	background: -webkit-linear-gradient(top, #be78ff, #8436ff);
+	background: -moz-linear-gradient(top, #be78ff, #8436ff);
+	background: linear-gradient(top, #be78ff, #8436ff);
+}
+
+.index .hot-ad {
+	margin-bottom: 10px;
+}
+
+.index .hot-ad ul li {
+	width: -webkit-calc((100% - 5px * 2) / 3);
+	width: calc((100% - 5px * 2) / 3);
+	float: left;
+	margin-right: 5px;
+}
+
+.index .hot-ad ul li:nth-child(3n) {
+	margin-right: 0px;
+}
+
+.index .middle-ad {
+	margin-bottom: 10px;
+}
+
+.index .featured-product {
+	margin-bottom: 10px;
+	background-color: #ffffff;
+}
+
+.index .featured-product:last-child {
+	margin-bottom: 0px;
+}
+
+.index .featured-product .featured-product-heading {
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.index .featured-product .featured-product-heading h5 {
+	display: inline;
+	position: relative;
+}
+
+.index .featured-product:nth-child(odd) .featured-product-heading h5 {
+	color: #ff8b00;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: -webkit-linear-gradient(left, #ff4a7d, #ff8b00);
+}
+
+.index .featured-product:nth-child(even) .featured-product-heading h5 {
+	color: #0066ff;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: -webkit-linear-gradient(left, #952dff, #0066ff);
+}
+
+.index .featured-product .featured-product-heading h5:before {
+	width: 90px;
+	height: 1px;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -100px;
+	background: -webkit-linear-gradient(left, #eeeeee, #dddddd);
+	background: -moz-linear-gradient(left, #eeeeee, #dddddd);
+	background: linear-gradient(left, #eeeeee, #dddddd);
+}
+
+.index .featured-product .featured-product-heading h5:after {
+	width: 90px;
+	height: 1px;
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -100px;
+	background: -webkit-linear-gradient(left, #dddddd, #eeeeee);
+	background: -moz-linear-gradient(left, #dddddd, #eeeeee);
+	background: linear-gradient(left, #dddddd, #eeeeee);
+}
+
+.index .featured-product .featured-product-body ul li {
+	width: -webkit-calc(100% / 3);
+	width: calc(100% / 3);
+	height: 185px;
+	float: left;
+	padding: 10px;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.index .featured-product .featured-product-body ul li:nth-child(-n+3) {
+	border-top: 1px solid #eeeeee;
+}
+
+.index .featured-product .featured-product-body ul li:nth-child(3n+1) {
+	padding-left: 9px;
+	border-left: 1px solid #eeeeee;
+}
+
+.index .featured-product .featured-product-body ul li h5 {
+	line-height: 30px;
+}
+
+.index .featured-product .featured-product-body ul li h6 {
+	color: #999999;
+	font-weight: normal;
+}

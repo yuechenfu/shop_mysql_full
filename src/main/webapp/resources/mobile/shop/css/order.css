@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Order
+ * Version: 6.1
+ */
+
+/* ---------- order-checkout ---------- */
+.order-checkout .page {
+	width: 100%;
+	display: none;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	z-index: 100;
+	background-color: #ffffff;
+}
+
+.order-checkout .page main .iconfont {
+	color: #cccccc;
+}
+
+.order-checkout .page main .iconfont.active {
+	color: #dd0000;
+}
+
+.order-checkout .page main .icon-location {
+	font-size: 18px;
+}
+
+.order-checkout .page main .icon-roundcheck {
+	font-size: 18px;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+}
+
+.order-checkout .page main .invoice-title-item {
+	padding: 10px 15px;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.order-checkout .page main .invoice-title-item:first-child {
+	margin-top: -10px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.order-checkout .page main .invoice-title-item:last-child {
+	margin-bottom: -10px;
+}
+
+.order-checkout .page main .list-group-item .icon-roundcheck {
+	line-height: 12px;
+}
+
+.order-checkout .page main .list-group-item.active .icon-roundcheck {
+	color: #dd0000;
+}
+
+.order-checkout .page main .media .icon-roundcheck {
+	line-height: 18px;
+}
+
+.order-checkout .main-page {
+	display: block;
+	background-color: #fafafa;
+}
+
+.order-checkout .main-page .current-receiver {
+	padding: 10px;
+	margin-bottom: 10px;
+	background: url(../images/order.png) bottom repeat-x #ffffff;
+	background-size: auto 5px;
+}
+
+.order-checkout .main-page .current-receiver strong {
+	line-height: 30px;
+}
+
+.order-checkout .main-page .coupon-name {
+	line-height: 15px;
+	display: none;
+	padding: 0px 3px;
+	color: #ff6900;
+	cursor: pointer;
+	border-radius: 3px;
+	border: solid 1px #ff6900;
+}
+
+.order-checkout .main-page input[type="text"] {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	border: none;
+	background-color: #ffffff;
+}
+
+.order-checkout .main-page footer span {
+	margin-right: 20px;
+}
+
+.order-checkout .main-page footer strong {
+	color: #de342f;
+}
+
+.order-checkout .add-receiver-page main {
+	padding: 10px;
+}
+
+.order-checkout .payment-method-page .media-object, .order-checkout .shipping-method-page .media-object {
+	width: 100px;
+	overflow: hidden;
+}
+
+.order-checkout .payment-method-page .media-object img, .order-checkout .shipping-method-page .media-object img {
+	max-width: 100%;
+}
+
+/* ---------- order-payment ---------- */
+.order-payment .modal .modal-body dl {
+	text-align: center;
+}
+
+.order-payment .modal .modal-body dl dt {
+	line-height: 35px;
+	font-size: 16px;
+}
+
+.order-payment .modal .modal-body dl dd {
+	line-height: 25px;
+	color: #888888;
+}
+
+.order-payment .modal .modal-footer {
+	text-align: center;
+}
+
+.order-payment .modal .modal-footer .btn {
+	margin-bottom: 10px;
+}
+
+.order-payment .modal .modal-footer .btn-primary {
+	margin-right: 20px;
+}
+
+.order-payment .modal .modal-footer .other-payment-method {
+	display: block;
+}
+
+.order-payment main {
+	background-color: #fafafa;
+}
+
+.order-payment main .list-group .iconfont {
+	color: #cccccc;
+}
+
+.order-payment main .list-group .icon-roundcheck {
+	font-size: 18px;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+}
+
+.order-payment main .list-group-item.active .icon-roundcheck {
+	color: #dd0000;
+}
+
+.order-payment main .fee-item {
+	display: none;
+}
+
+.order-payment main .media-object {
+	width: 100px;
+	overflow: hidden;
+}
+
+.order-payment main .media-object img {
+	max-width: 100%;
+	border: solid 1px #e8e8e8;
+}

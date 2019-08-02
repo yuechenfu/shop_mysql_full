@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Index
+ * Version: 6.1
+ */
+
+/* ---------- index ---------- */
+.index .summary .panel-body > .media > .media-left {
+	padding: 0px 50px 0px 10px;
+	border-image: -webkit-linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-image: -moz-linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-image: linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-width: 0px 1px 0px 0px;
+	border-right: 1px solid #f0f0f0;
+}
+
+.index .summary .panel-body > .media > .media-left li {
+	line-height: 30px;
+}
+
+.index .summary .panel-body > .media > .media-body {
+	padding-left: 50px;
+}
+
+.index .summary .panel-body > .media > .media-body li {
+	width: 25%;
+	float: left;
+}
+
+.index .summary .panel-body > .media > .media-body .iconfont {
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	display: block;
+	margin-right: 10px;
+	color: #ffffff;
+	font-size: 35px;
+	text-align: center;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	border-radius: 50%;
+}
+
+.index .summary .panel-body > .media > .media-body a:hover .iconfont {
+	opacity: 0.8;
+}
+
+.index .summary .panel-body > .media > .media-body p {
+	color: #999999;
+	font-size: 14px;
+}
+
+.index .order .panel-body > .media-list > .media > .media-left {
+	min-width: 300px;
+	border-image: -webkit-linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-image: -moz-linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-image: linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-width: 0px 1px 0px 0px;
+	border-right: 1px solid #f0f0f0;
+}
+
+.index .order .panel-body > .media-list > .media > .media-body {
+	line-height: 25px;
+	padding-left: 50px;
+}
+
+.index .order .panel-body > .media-list > .media > .media-body span {
+	margin-right: 10px;
+}
+
+.index .order .panel-body > .media-list > .media > .media-right {
+	min-width: 300px;
+}
+
+.index .product-favorite .thumbnail {
+	line-height: 25px;
+	padding: 20px 20px 0px 20px;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+.index .product-favorite .thumbnail em {
+	position: absolute;
+	top: 117px;
+	right: 31px;
+	left: 31px;
+	color: #ffffff;
+	font-style: normal;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.index .store-favorite .thumbnail {
+	height: 120px;
+	line-height: 25px;
+	padding: 15px 15px 0px 15px;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+.index .store-favorite .thumbnail em {
+	position: absolute;
+	top: 51px;
+	right: 15px;
+	left: 15px;
+	color: #ffffff;
+	font-style: normal;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.index .store-favorite .thumbnail img {
+	max-height: 60px;
+}
+
+.index .store-favorite .caption {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}

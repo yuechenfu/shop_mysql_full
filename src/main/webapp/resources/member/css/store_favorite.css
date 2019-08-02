@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - StoreFavorite
+ * Version: 6.1
+ */
+
+/* ---------- store-favorite ---------- */
+.store-favorite .store-favorite-list li {
+	width: -webkit-calc((100% - 15px * 3) / 4);
+	width: calc((100% - 15px * 3) / 4);
+	height: 130px;
+	line-height: 25px;
+	float: left;
+	padding: 20px 15px 0px 15px;
+	margin-top: 15px;
+	margin-right: 15px;
+	position: relative;
+	text-align: center;
+	-webkit-transition: box-shadow 0.3s, border-color 0.3s;
+	transition: box-shadow 0.3s, border-color 0.3s;
+	border: 1px solid #e8e8e8;
+}
+
+.store-favorite .store-favorite-list li:hover {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);
+	border-color: #dddddd;
+}
+
+.store-favorite .store-favorite-list li:nth-child(-n+4) {
+	margin-top: 0px;
+}
+
+.store-favorite .store-favorite-list li:nth-child(4n) {
+	margin-right: -1px;
+}
+
+.store-favorite .store-favorite-list li em {
+	position: absolute;
+	top: 55px;
+	right: 15px;
+	left: 15px;
+	color: #ffffff;
+	font-style: normal;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.store-favorite .store-favorite-list li img {
+	max-height: 60px;
+}
+
+.store-favorite .store-favorite-list li .caption {
+	width: 100%;
+	position: absolute;
+	right: 0px;
+	bottom: 10px;
+	left: 0px;
+}
+
+.store-favorite .store-favorite-list li .caption h5 {
+	line-height: 25px;
+}
+
+.store-favorite .store-favorite-list li .caption h5 .label-primary {
+	margin-left: 10px;
+}
+
+.store-favorite .store-favorite-list .caption .action {
+	display: none;
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
+}
+
+.store-favorite .store-favorite-list li:hover .caption .action {
+	display: block;
+}

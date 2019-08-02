@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Login
+ * Version: 6.1
+ */
+
+/* ---------- login ---------- */
+.login .main-header {
+	margin-bottom: 0px;
+}
+
+.login main {
+	margin: 2px 0px;
+	background-color: #ff7000;
+}
+
+.login main .left-ad {
+	height: 460px;
+	overflow: hidden;
+}
+
+.login .panel {
+	margin: 60px 0px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 0px;
+	border: none;
+}
+
+.login .panel .panel-heading {
+	padding: 0px 30px;
+	border-image: -webkit-linear-gradient(left, #e8e8e8, #f8f8f8) 1;
+	border-image: -moz-linear-gradient(left, #e8e8e8, #f8f8f8) 1;
+	border-image: linear-gradient(left, #e8e8e8, #f8f8f8) 1;
+	border-width: 0px 0px 1px 0px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.login .panel .panel-heading h1 {
+	line-height: 50px;
+	font-size: 16px;
+}
+
+.login .panel .panel-body {
+	padding: 20px 30px;
+}
+
+.login .panel .panel-body .input-group-addon {
+	color: #bbbbbb;
+}
+
+.login .panel .panel-footer {
+	padding: 20px 30px;
+	text-align: center;
+	border-image: -webkit-linear-gradient(left, #e8e8e8, #f8f8f8) 1;
+	border-image: -moz-linear-gradient(left, #e8e8e8, #f8f8f8) 1;
+	border-image: linear-gradient(left, #e8e8e8, #f8f8f8) 1;
+	border-width: 1px 0px 0px 0px;
+	border-top: 1px solid #e8e8e8;
+}
+
+.login .panel .panel-footer li {
+	display: inline;
+	margin: 0px 10px;
+}
+
+.login .panel .panel-footer li img {
+	width: 30px;
+	height: 30px;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.login .panel .panel-footer li:hover img {
+	opacity: 0.6;
+}

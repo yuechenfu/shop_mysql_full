@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Base
+ * Version: 6.1
+ */
+
+/* ---------- label ---------- */
+.label-primary {
+	background-color: #ff6900;
+}
+
+/* ---------- member ---------- */
+.member .main-header {
+	margin-bottom: 0px;
+}
+
+.member main {
+	padding: 20px 0px;
+	background-color: #f8f8f8;
+}
+
+.member main .panel {
+	border-radius: 0px;
+	border: none;
+}
+
+.member main .panel > .panel-heading {
+	border-image: -webkit-linear-gradient(left, #f0f0f0, #f8f8f8) 1;
+	border-image: -moz-linear-gradient(left, #f0f0f0, #f8f8f8) 1;
+	border-image: linear-gradient(left, #f0f0f0, #f8f8f8) 1;
+	border-width: 0px 0px 1px 0px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.member main .panel .panel-footer .btn-primary {
+	margin-right: 10px;
+}
+
+.member .modal .modal-body .list-item {
+	line-height: 20px;
+}
+
+.member .table .img-thumbnail {
+	max-width: 60px;
+}
+
+/* ---------- main-menu ---------- */
+.member .main-menu {
+	background-color: #ffffff;
+}
+
+.member .main-menu .main-menu-heading {
+	height: 50px;
+	line-height: 50px;
+	padding-left: 20px;
+	font-size: 14px;
+	border-bottom: 1px solid #f8f8f8;
+}
+
+.member .main-menu .main-menu-heading a {
+	color: #ff6900;
+}
+
+.member .main-menu .main-menu-heading .iconfont {
+	color: #ff6900;
+	font-size: 15px;
+}
+
+.member .main-menu .main-menu-body dl {
+	padding: 10px 0px;
+	border-bottom: 1px solid #f8f8f8;
+}
+
+.member .main-menu .main-menu-body dl:last-child {
+	border-bottom: none;
+}
+
+.member .main-menu .main-menu-body dl dt {
+	line-height: 35px;
+	padding-left: 20px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.member .main-menu .main-menu-body dl dt .iconfont {
+	font-size: 15px;
+	color: #aaaaaa;
+}
+
+.member .main-menu .main-menu-body dl dd {
+	line-height: 30px;
+	padding-left: 40px;
+}
+
+.member .main-menu .main-menu-body dl dd.active a {
+	color: #ff6900;
+}
+
+/* ---------- button ---------- */
+.media .media-right .btn {
+	margin-left: 10px;
+}
+
+/* ---------- payment-plugin ---------- */
+.member .payment-plugin .payment-plugin-heading {
+	padding: 10px 0px;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.member .payment-plugin .payment-plugin-body .media {
+	width: -webkit-calc((100% - 15px * 4) / 5);
+	width: calc((100% - 15px * 4) / 5);
+	height: 50px;
+	float: left;
+	padding: 7px;
+	margin-top: 15px;
+	margin-right: 15px;
+	cursor: pointer;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
+	border-radius: 3px;
+	border: 1px solid #dddddd;
+}
+
+.member .payment-plugin .payment-plugin-body .media:nth-child(5n) {
+	margin-right: 0px;
+}
+
+.member .payment-plugin .payment-plugin-body .media:hover {
+	border-color: #ff851b;
+}
+
+.member .payment-plugin .payment-plugin-body .media .media-object {
+	height: 34px;
+	line-height: 34px;
+}
+
+.member .payment-plugin .payment-plugin-body .media .iconfont {
+	line-height: 34px;
+	color: #cccccc;
+	font-size: 26px;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+}
+
+.member .payment-plugin .payment-plugin-body .media.active .iconfont {
+	color: #ff851b;
+}
+
+.member .payment-plugin .payment-plugin-body .media.active {
+	border-color: #ff851b;
+}
+
+/* ---------- list-group ---------- */
+.panel .panel-body .list-group:last-child {
+	margin-bottom: 0px;
+}
+
+.panel .panel-body .list-group > .list-group-item {
+	padding-right: 0px;
+	padding-left: 0px;
+	border-right: none;
+	border-left: none;
+	border-radius: 0px;
+}
+
+.panel .panel-body .list-group > .list-group-item:first-child {
+	line-height: 30px;
+	padding-top: 0px;
+	border-top: none;
+}
+
+.panel .panel-body .list-group > .list-group-item:last-child {
+	padding-bottom: 0px;
+	border-bottom: none;
+}
+
+/* ---------- media-list ---------- */
+.panel .panel-body > .media-list > .media > .media-left {
+	max-width: 500px;
+	border-image: -webkit-linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-image: -moz-linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-image: linear-gradient(top, #fafafa, #f0f0f0, #fafafa) 1;
+	border-width: 0px 1px 0px 0px;
+	border-right: 1px solid #f0f0f0;
+}
+
+.panel .panel-body > .media-list > .media > .media-left h5 {
+	width: 400px;
+}
+
+.panel .panel-body > .media-list > .media > .media-body {
+	line-height: 25px;
+	padding-left: 50px;
+}
+
+.panel .panel-body > .media-list > .media > .media-body span {
+	margin-right: 10px;
+}
+
+.panel .panel-body > .media-list > .media > .media-right {
+	min-width: 300px;
+}
+
+.panel .panel-body > .media-list > .media > .media-right strong {
+	line-height: 30px;
+}
+
+/* ---------- pagination ---------- */
+.pagination li a:hover {
+	color: #ff6666;
+	border-color: #ff6666;
+}
+
+.pagination li.active a {
+	border-color: #ff6666;
+	background-color: #ff6666;
+}
+
+.pagination li.active a:hover {
+	cursor: pointer;
+	border-color: #ff4444;
+	background-color: #ff4444;
+}
+
+/* ---------- pay-confirm-modal ---------- */
+.pay-confirm-modal .modal-body p {
+	line-height: 40px;
+	font-size: 14px;
+	color: #888888;
+	text-align: center;
+}
+
+.pay-confirm-modal .modal-body p .iconfont {
+	font-size: 30px;
+	color: #f56a00;
+}
+
+.pay-confirm-modal .modal-footer {
+	text-align: center;
+}
+
+.pay-confirm-modal .modal-footer .btn-primary {
+	color: #f56a00;
+	opacity: 1;
+	-webkit-transition: box-shadow 0.3s;
+	transition: box-shadow 0.3s;
+	border-color: #f56a00;
+	background: #ffffff;
+}
+
+.pay-confirm-modal .modal-footer .btn-primary:hover {
+	box-shadow: 0px 0px 8px rgba(245, 106, 0, 0.3);
+}

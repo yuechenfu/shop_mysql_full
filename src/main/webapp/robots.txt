@@ -1,0 +1,4 @@
+# robots.txt for S H O P + +
+
+User-agent: *
+Sitemap: /sitemap/index.xml

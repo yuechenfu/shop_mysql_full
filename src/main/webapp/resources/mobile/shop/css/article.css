@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Article
+ * Version: 6.1
+ */
+
+/* ---------- article-detail ---------- */
+.article-detail main {
+	padding: 20px 0px;
+}
+
+.article-detail main h4 {
+	line-height: 25px;
+	text-align: center;
+}
+
+.article-detail main .summary {
+	line-height: 20px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.article-detail main .summary span {
+	margin-right: 10px;
+}
+
+.article-detail main article {
+	line-height: 30px;
+	padding: 5px;
+	color: #666666;
+}
+
+/* ---------- article-list ---------- */
+.article-list .list li {
+	padding: 5px;
+	border-top: solid 1px #f1f1f1;
+}
+
+.article-list .list li:first-child {
+	border-top: none;
+}
+
+.article-list .list li h5 {
+	line-height: 30px;
+	color: #333333;
+}
+
+.article-list .list li h5 span {
+	max-width: 270px;
+	margin-right: 3px;
+}
+
+.article-list .list ul li h5 strong {
+	padding: 1px 5px;
+	margin-right: 3px;
+	color: #ff6600;
+	font-weight: normal;
+	font-size: 12px;
+	vertical-align: top;
+	background-color: #fff1ec;
+}
+
+.article-list .list li p {
+	line-height: 30px;
+	color: #999999;
+	font-size: 12px;
+}
+
+.article-list .list li span {
+	line-height: 20px;
+	margin-right: 10px;
+	font-size: 12px;
+}

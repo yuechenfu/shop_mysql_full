@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Cart
+ * Version: 6.1
+ */
+
+/* ---------- cart-list ---------- */
+.cart-list .tips {
+	padding: 10px;
+	background-color: #f8f8f8;
+}
+
+.cart-list .cart-item-group .media .media-left .product-image {
+	display: block;
+	position: relative;
+}
+
+.cart-list .cart-item-group .media .media-left .product-image strong {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	color: #ffffff;
+	font-weight: normal;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-list .cart-item-group .media .media-body strong {
+	display: block;
+	color: #de342f;
+}
+
+.cart-list .cart-item-group .cart-item-group-footer dl {
+	padding-left: 50px;
+	margin-bottom: 5px;
+}
+
+.cart-list .cart-item-group .cart-item-group-footer dl:last-child {
+	margin-bottom: 0px;
+}
+
+.cart-list .cart-item-group .cart-item-group-footer dl dt {
+	float: left;
+	padding: 0px 5px;
+	margin-right: 10px;
+	margin-left: -50px;
+	color: #ff6900;
+	font-weight: normal;
+	border: 1px solid #ff6900;
+}
+
+.cart-list .cart-item-group .cart-item-group-footer dl dd {
+	max-width: 200px;
+	float: left;
+	padding: 1px 5px;
+	margin-right: 10px;
+	color: #666666;
+}
+
+.cart-list .empty {
+	padding: 30px 0px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.cart-list footer span {
+	margin: 0px 10px;
+}
+
+.cart-list footer strong {
+	color: #de342f;
+	font-size: 14px;
+}
+
+.cart-list footer .clear {
+	display: none;
+}

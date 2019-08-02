@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - FriendLink
+ * Version: 6.1
+ */
+
+/* ---------- friend-link ---------- */
+.friend-link main .panel {
+	padding: 20px;
+	margin-bottom: 15px;
+	border-radius: 0px;
+}
+
+.friend-link main .panel li {
+	width: -webkit-calc((100% - 20px * 7) / 8);
+	width: calc((100% - 20px * 7) / 8);
+	height: 52px;
+	float: left;
+	margin-top: 20px;
+	margin-right: 20px;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
+	border: 1px solid #eeeeee;
+}
+
+.friend-link main .panel li:nth-child(-n+8) {
+	margin-top: 0px;
+}
+
+.friend-link main .panel li:nth-child(8n) {
+	margin-right: 0px;
+}
+
+.friend-link main .panel li:hover {
+	border-color: #ff6900;
+}
+
+.friend-link main .panel li img {
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.friend-link main .panel li:hover img {
+	opacity: 0.5;
+}
+
+.friend-link main .panel li h5 {
+	line-height: 50px;
+	padding: 0px 10px;
+	font-weight: normal;
+	text-align: center;
+}

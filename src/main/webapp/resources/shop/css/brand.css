@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Brand
+ * Version: 6.1
+ */
+
+/* ---------- brand-list ---------- */
+.brand-list .list {
+	border-top: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+}
+
+.brand-list .list li {
+	width: -webkit-calc(100% / 5);
+	width: calc(100% / 5);
+	height: 100px;
+	float: left;
+	padding: 10px 0px;
+	text-align: center;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.brand-list .list li dt img {
+	max-height: 60px;
+	padding: 5px;
+	-webkit-transition: transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.brand-list .list li:hover dt img {
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+
+.brand-list .list li dd {
+	-webkit-transition: transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.brand-list .list li:hover dd {
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+
+.brand-list .list li a.text-overflow {
+	width: 100%;
+	height: 100%;
+	line-height: 80px;
+	display: inline-block;
+}
+
+.brand-list .no-result {
+	margin-bottom: 15px;
+}
+
+.brand-list .no-result dl dt {
+	line-height: 50px;
+	color: #ff6900;
+	font-size: 14px;
+}
+
+.brand-list .no-result dl dd {
+	line-height: 30px;
+	color: #999999;
+}
+
+/* ---------- brand-detail ---------- */
+.brand-detail .detail .media {
+	margin-bottom: 15px;
+	border: 1px solid #eeeeee;
+}
+
+.brand-detail .detail .media .media-left a img {
+	max-height: 80px;
+	padding: 10px;
+}
+
+.brand-detail .detail .brand-introduction {
+	line-height: 25px;
+	padding: 15px;
+	margin-bottom: 15px;
+	text-align: justify;
+	border: 1px solid #eeeeee;
+}
+
+.brand-detail .detail .brand-introduction ul {
+	padding-left: 40px;
+	list-style: disc;
+}
+
+.brand-detail .detail .brand-introduction ol {
+	padding-left: 40px;
+	list-style: decimal;
+}
+
+.brand-detail .detail .related-product {
+	margin-bottom: 15px;
+}
+
+.brand-detail .detail .related-product .related-product-heading {
+	margin-bottom: 15px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.brand-detail .detail .related-product .related-product-heading h5 {
+	line-height: 25px;
+	display: inline-block;
+	margin-bottom: -1px;
+	border-bottom: 2px solid #ff6900;
+}
+
+.brand-detail .detail .related-product .related-product-body li {
+	width: -webkit-calc((100% - 15px * 4) / 5);
+	width: calc((100% - 15px * 4) / 5);
+	height: 260px;
+	line-height: 25px;
+	float: left;
+	padding: 10px 10px 0px 10px;
+	margin-top: 15px;
+	margin-right: 15px;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
+	border: 1px solid #eeeeee;
+}
+
+.brand-detail .detail .related-product .related-product-body li:nth-child(-n+5) {
+	margin-top: 0px;
+}
+
+.brand-detail .detail .related-product .related-product-body li:nth-child(5n) {
+	margin-right: -1px;
+}
+
+.brand-detail .detail .related-product .related-product-body li:hover {
+	box-shadow: 0px 0px 10px rgba(245, 106, 0, 0.1);
+	border: 1px solid #f56a00;
+}
+
+.brand-detail .detail .related-product .related-product-body li img {
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.brand-detail .detail .related-product .related-product-body li:hover img {
+	opacity: 0.8;
+}
+
+.brand-detail .detail .related-product .related-product-body li strong {
+	color: #f04134;
+}
+
+.brand-detail .detail .related-product .related-product-body li del {
+	color: #bfbfbf;
+	font-weight: normal;
+}
+
+.brand-detail .detail .related-product .related-product-body li h5 {
+	line-height: 25px;
+	font-weight: normal;
+}
+
+.brand-detail .detail .related-product .related-product-body li h6 {
+	line-height: 25px;
+	color: #f56a00;
+	font-weight: normal;
+}

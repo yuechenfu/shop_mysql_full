@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Payment
+ * Version: 6.1
+ */
+
+/* ---------- pay-result ---------- */
+.pay-result .main-header {
+	margin-bottom: 0px;
+}
+
+.pay-result main {
+	padding: 40px 0px;
+	background-color: #f8f8f8;
+}
+
+.pay-result .pay-confirm-modal {
+	top: 280px;
+}
+
+.pay-result .panel {
+	width: 700px;
+	padding: 0px 20px;
+	margin: 0px auto;
+	background-color: #ffffff;
+}
+
+.pay-result .panel-heading .panel-title {
+	line-height: 60px;
+	font-size: 21px;
+}
+
+.pay-result .panel-heading .panel-title .iconfont {
+	padding: 5px;
+	margin-right: 15px;
+	font-size: 24px;
+	border-radius: 50%;
+	border: 1px solid #00a854;
+}
+
+.pay-result .panel-body dl dt, .pay-result .panel-body dl dd {
+	line-height: 35px;
+	color: #777777;
+	font-size: 14px;
+	font-weight: normal;
+}

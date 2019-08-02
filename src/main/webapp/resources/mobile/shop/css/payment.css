@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Payment
+ * Version: 6.1
+ */
+
+/* ---------- pay-result ---------- */
+.pay-result .pay-confirm-modal {
+	margin-top: 50%;
+}
+
+.pay-result .pay-confirm-modal .modal-header {
+	text-align: center;
+}
+
+.pay-result .pay-confirm-modal .modal-body {
+	padding: 0px;
+	text-align: center;
+}
+
+.pay-result .pay-confirm-modal .modal-body a {
+	line-height: 40px;
+	display: block;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.pay-result .pay-confirm-modal .modal-body a:last-child {
+	border-bottom: none;
+}
+
+.pay-result header {
+	box-shadow: none;
+}
+
+.pay-result .panel {
+	border: none;
+}
+
+.pay-result .panel .panel-heading {
+	height: 80px;
+	line-height: 80px;
+	padding: 0px;
+	color: #3dbd7d;
+	font-size: 16px;
+	text-align: center;
+	border: none;
+	background-color: #f8f8f8;
+}
+
+.pay-result .panel .panel-heading .iconfont {
+	padding: 5px;
+	margin-right: 5px;
+	font-size: 14px;
+	color: #ffffff;
+	border-radius: 50%;
+	background-color: #3dbd7d;
+}
+
+.pay-result .panel .panel-body p {
+	line-height: 25px;
+	padding: 30px 0px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	color: #999999;
+	text-align: center;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.pay-result .panel .panel-body p strong {
+	display: block;
+	color: #f04134;
+	font-size: 24px;
+}
+
+.pay-result .panel .panel-body dl dt {
+	width: 80px;
+	line-height: 25px;
+	float: left;
+	clear: left;
+	margin-right: 10px;
+	color: #999999;
+}
+
+.pay-result .panel .panel-body dl dd {
+	line-height: 25px;
+	float: right;
+	color: #999999;
+}

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd"
+	default-lazy-init="true">
+
+	<context:property-placeholder location="classpath*:/shopxx.properties" ignore-resource-not-found="true" ignore-unresolvable="true" />
+
+	<context:component-scan base-package="net.shopxx" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
+	
+	<mvc:annotation-driven validator="validator">
+		<mvc:path-matching suffix-pattern="false" trailing-slash="false" />
+		<mvc:argument-resolvers>
+			<bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
+			<bean class="org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver" />
+			<bean class="net.shopxx.security.CurrentUserMethodArgumentResolver" />
+			<bean class="net.shopxx.security.CurrentCartMethodArgumentResolver" />
+			<bean class="net.shopxx.security.CurrentStoreMethodArgumentResolver" />
+			<bean class="net.shopxx.audit.AuditLogMethodArgumentResolver" />
+		</mvc:argument-resolvers>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.BufferedImageHttpMessageConverter" />
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>${json_content_type}</value>
+						<value>${html_content_type}</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<mvc:resources mapping="/favicon.ico" location="/favicon.ico" cache-period="86400" />
+	<mvc:resources mapping="/robots.txt" location="/robots.txt" cache-period="86400" />
+	<mvc:resources mapping="/shopxx.txt" location="/shopxx.txt" cache-period="86400" />
+	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="86400" />
+	<mvc:resources mapping="/upload/**" location="/upload/" cache-period="86400" />
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/resources/**" />
+			<bean class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+				<property name="cacheSeconds" value="86400" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/cart/**" />
+			<mvc:mapping path="/order/**" />
+			<mvc:mapping path="/member/**" />
+			<mvc:mapping path="/business/**" />
+			<mvc:mapping path="/admin/**" />
+			<bean class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+				<property name="cacheSeconds" value="0" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/cart/**" />
+			<mvc:mapping path="/order/**" />
+			<mvc:mapping path="/member/**" />
+			<bean class="net.shopxx.security.CurrentUserHandlerInterceptor">
+				<property name="userClass" value="net.shopxx.entity.Member" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/business/**" />
+			<bean class="net.shopxx.security.CurrentUserHandlerInterceptor">
+				<property name="userClass" value="net.shopxx.entity.Business" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/admin/**" />
+			<bean class="net.shopxx.security.CurrentUserHandlerInterceptor">
+				<property name="userClass" value="net.shopxx.entity.Admin" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/cart/**" />
+			<mvc:mapping path="/order/**" />
+			<bean class="net.shopxx.security.CurrentCartHandlerInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/business/**" />
+			<bean class="net.shopxx.security.CurrentStoreHandlerInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/payment/**" />
+			<bean class="net.shopxx.security.CsrfInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/admin/**" />
+			<mvc:exclude-mapping path="/business/**" />
+			<bean class="net.shopxx.security.XssInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/admin/**" />
+			<mvc:mapping path="/business/**" />
+			<mvc:exclude-mapping path="/admin/template/**" />
+			<mvc:exclude-mapping path="/admin/ad_position/**" />
+			<bean class="net.shopxx.security.XssInterceptor">
+				<property name="whitelistType" value="RELAXED" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor">
+				<property name="entityManagerFactory" ref="entityManagerFactory" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/member/register/submit" />
+			<bean class="net.shopxx.captcha.CaptchaInterceptor">
+				<property name="captchaType" value="MEMBER_REGISTER" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/business/register/submit" />
+			<bean class="net.shopxx.captcha.CaptchaInterceptor">
+				<property name="captchaType" value="BUSINESS_REGISTER" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/member/review/save" />
+			<bean class="net.shopxx.captcha.CaptchaInterceptor">
+				<property name="captchaType" value="REVIEW" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/consultation/save" />
+			<bean class="net.shopxx.captcha.CaptchaInterceptor">
+				<property name="captchaType" value="CONSULTATION" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/password/forgot" />
+			<bean class="net.shopxx.captcha.CaptchaInterceptor">
+				<property name="captchaType" value="FORGOT_PASSWORD" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/password/reset" />
+			<bean class="net.shopxx.captcha.CaptchaInterceptor">
+				<property name="captchaType" value="RESET_PASSWORD" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/admin/**" />
+			<bean class="net.shopxx.audit.AuditLogInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/business/**promotion/add" />
+			<mvc:mapping path="/business/**promotion/save" />
+			<mvc:mapping path="/business/promotion_plugin/list" />
+			<bean class="net.shopxx.interceptor.PromotionPluginInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/business/**promotion/edit" />
+			<mvc:mapping path="/business/**promotion/update" />
+			<bean class="net.shopxx.interceptor.PromotionPluginInterceptor">
+				<property name="promotionPluginProvider" ref="promotionIdPromotionPluginProvider" />
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/business/promotion/delete" />
+			<bean class="net.shopxx.interceptor.PromotionPluginInterceptor">
+				<property name="promotionPluginProvider">
+					<bean class="net.shopxx.interceptor.PromotionPluginInterceptor.PromotionIdPromotionPluginProvider">
+						<property name="promotionIdParameterName" value="ids" />
+					</bean>
+				</property>	
+			</bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+					
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="viewResolver" class="org.springframework.mobile.device.view.LiteDeviceDelegatingViewResolver">
+		<constructor-arg>
+			<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+				<property name="contentType" value="${html_content_type}" />
+				<property name="suffix" value="${template.suffix}" />
+				<property name="requestContextAttribute" value="requestContext" />
+			</bean>
+		</constructor-arg>
+		<property name="mobilePrefix" value="mobile/" />
+		<property name="tabletPrefix" value="tablet/" />
+		<property name="enableFallback" value="true" />
+	</bean>
+
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+</beans>

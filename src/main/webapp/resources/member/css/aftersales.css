@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Aftersales
+ * Version: 6.1
+ */
+
+/* ---------- aftersales ---------- */
+.aftersales .aftersales-detail dt {
+	line-height: 30px;
+}
+
+.aftersales .aftersales-detail dd {
+	width: 50%;
+	line-height: 30px;
+	float: left;
+}
+
+.aftersales .aftersales-detail dl.aftersales-transit dd {
+	width: 100%;
+	line-height: normal;
+	float: none;
+}
+
+.aftersales .aftersales-apply .tab-pane .panel {
+	margin: 0px;
+}
+
+.aftersales .aftersales-apply .tab-pane .panel > .panel-heading {
+	font-weight: bold;
+}
+
+.aftersales .aftersales-apply .form-horizontal table .checkbox {
+	margin-bottom: 10px;
+}
+
+.aftersales .aftersales-apply .gift ul li {
+	margin-right: 10px;
+	float: left;
+}

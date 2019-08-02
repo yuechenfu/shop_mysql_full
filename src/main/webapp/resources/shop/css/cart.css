@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Cart
+ * Version: 6.1
+ */
+
+/* ---------- cart-list ---------- */
+.cart-list .main-header {
+	margin-bottom: 0px;
+}
+
+.cart-list main {
+	padding: 10px 0px;
+	background-color: #f8f8f8
+}
+
+.cart-list table {
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.cart-list table th, .cart-list table td {
+	padding: 10px;
+}
+
+.cart-list table thead th {
+	color: #666666;
+	font-weight: normal;
+	border-bottom: 10px solid #f8f8f8;
+}
+
+.cart-list table .cart-item-group {
+	border-bottom: 10px solid #f8f8f8;
+}
+
+.cart-list table .cart-item-group .cart-item-group-heading td {
+	border-bottom: 1px solid #eeeeee;
+}
+
+.cart-list table .cart-item-group .media .media-left .product-image {
+	display: block;
+	position: relative;
+}
+
+.cart-list table .cart-item-group .media .media-left .product-image strong {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	color: #ffffff;
+	font-weight: normal;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-list table .cart-item-group .cart-item-group-footer td {
+	border-top: 1px solid #eeeeee;
+}
+
+.cart-list table .cart-item-group .cart-item-group-footer dl {
+	padding-left: 50px;
+	margin-bottom: 5px;
+}
+
+.cart-list table .cart-item-group .cart-item-group-footer dl:last-child {
+	margin-bottom: 0px;
+}
+
+.cart-list table .cart-item-group .cart-item-group-footer dl dt {
+	float: left;
+	padding: 0px 5px;
+	margin-right: 10px;
+	margin-left: -50px;
+	color: #ff6900;
+	font-weight: normal;
+	border: 1px solid #ff6900;
+}
+
+.cart-list table .cart-item-group .cart-item-group-footer dl dd {
+	max-width: 200px;
+	float: left;
+	padding: 1px 5px;
+	margin-right: 10px;
+	color: #666666;
+}
+
+.cart-list .bar {
+	line-height: 41px;
+	background-color: #ffffff;
+}
+
+.cart-list .bar .clear {
+	display: block;
+	text-align: center;
+	border-right: 1px solid #eeeeee;
+}
+
+.cart-list .bar .redirect-login {
+	margin-right: 20px;
+	color: #ff6900;
+}
+
+.cart-list .bar span {
+	margin-right: 20px;
+}
+
+.cart-list .bar strong {
+	color: #de342f;
+	font-size: 14px;
+}
+
+.cart-list .bar .btn-primary {
+	border-radius: 0px;
+}
+
+.cart-list .empty {
+	padding: 50px 0px;
+	font-size: 14px;
+	text-align: center;
+}

@@ -1,0 +1,6 @@
+SHOP++
+Copyright 2008-2018 shopxx.net. All rights reserved.
+Support: http://www.shopxx.net
+License: http://www.shopxx.net/license
+Revision: 6.1.0 RELEASE
+Date: 2018-03

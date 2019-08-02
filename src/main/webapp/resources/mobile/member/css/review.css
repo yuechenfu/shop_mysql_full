@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Review
+ * Version: 6.1
+ */
+
+/* ---------- review ---------- */
+.review .review-add h5 {
+	line-height: 25px;
+	font-weight: bold;
+}
+
+.review .review-add .media {
+	line-height: 30px;
+	margin-bottom: 15px;
+}
+
+.review .review-list .media .media-body .media-heading span {
+	display: block;
+}
+
+.review .review-list .media .media-right .score {
+	white-space: nowrap;
+}

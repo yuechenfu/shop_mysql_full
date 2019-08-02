@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Review
+ * Version: 6.1
+ */
+
+/* ---------- review ---------- */
+.review .review-product .media {
+	margin-bottom: 15px;
+}
+
+.review .review-product .media .media-left img {
+	max-width: 70px;
+}
+
+.review .review-product .media .media-body>span {
+	line-height: 30px;
+	display: block;
+}
+
+.review .review-product .media .media-body .icon-favor {
+	color: #cccccc;
+}
+
+.review .review-product .media .media-body .icon-favorfill {
+	color: #fdaa01;
+}
+
+.review ul.type li {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	cursor: pointer;
+	color: #b0b0b0;
+	background-color: #f5f5f5;
+}
+
+.review ul.type li.current {
+	color: #ffffff;
+	background-color: #ff8000;
+}
+
+.review .panel .panel-body {
+	padding: 0px 15px;
+}
+
+.review .panel .panel-body > p {
+	padding: 20px 0px;
+}
+
+.review .panel .panel-body .media {
+	margin-top: 0px;
+	padding: 20px 0px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.review .panel .panel-body .media:last-child {
+	border-bottom: none;
+}
+
+.review .panel .panel-body .media .media-left {
+	min-width: 150px;
+	line-height: 30px;
+}
+
+.review .panel .panel-body .media .media-body {
+	line-height: 30px;
+}
+
+.review .panel .panel-body .media .media-body .icon-favor {
+	color: #cccccc;
+}
+
+.review .panel .panel-body .media .media-body .icon-favorfill {
+	color: #fdaa01;
+}
+
+.review .panel .panel-body .media .media-body .review-reply {
+	color: #af874d;
+}
+
+.review .panel .panel-body .media .media-body > span {
+	margin-right: 15px;
+}

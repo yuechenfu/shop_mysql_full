@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<display-name>SHOP++</display-name>
+	<description>SHOP++ B2B2C网上商城系统</description>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:/applicationContext.xml,
+			classpath*:/applicationContext-shiro.xml
+		</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>deviceResolverRequestFilter</filter-name>
+		<filter-class>org.springframework.mobile.device.DeviceResolverRequestFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>sitePreferenceRequestFilter</filter-name>
+		<filter-class>org.springframework.mobile.device.site.SitePreferenceRequestFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>etagHeaderFilter</filter-name>
+		<filter-class>org.springframework.web.filter.ShallowEtagHeaderFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>indexPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>indexPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>storeIndexPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>storeIndexPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>articleListPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>articleListPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>articleDetailPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>articleDetailPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>productListPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>productListPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>productDetailPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>productDetailPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>brandListPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>brandListPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>brandDetailPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>brandDetailPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>productCategoryPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>productCategoryPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>promotionDetailPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>promotionDetailPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>friendLinkPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>friendLinkPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>consultationDetailPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>consultationDetailPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>reviewDetailPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>reviewDetailPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>areaPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>areaPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>baseJsPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>baseJsPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>sitemapPageCachingFilter</filter-name>
+		<filter-class>net.shopxx.filter.PageCachingFilter</filter-class>
+		<init-param>
+			<param-name>cacheName</param-name>
+			<param-value>sitemapPage</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>requestContextFilter</filter-name>
+		<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>openEntityManagerInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>memberLoginCaptchaFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>
+			<param-name>targetBeanName</param-name>
+			<param-value>captchaFilter</param-value>
+		</init-param>
+		<init-param>
+			<param-name>targetFilterLifecycle</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>captchaType</param-name>
+			<param-value>MEMBER_LOGIN</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>businessLoginCaptchaFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>
+			<param-name>targetBeanName</param-name>
+			<param-value>captchaFilter</param-value>
+		</init-param>
+		<init-param>
+			<param-name>targetFilterLifecycle</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>captchaType</param-name>
+			<param-value>BUSINESS_LOGIN</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>adminLoginCaptchaFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>
+			<param-name>targetBeanName</param-name>
+			<param-value>captchaFilter</param-value>
+		</init-param>
+		<init-param>
+			<param-name>targetFilterLifecycle</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>captchaType</param-name>
+			<param-value>ADMIN_LOGIN</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>shiroFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>etagHeaderFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>deviceResolverRequestFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>sitePreferenceRequestFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>indexPageCachingFilter</filter-name>
+		<url-pattern>/</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>storeIndexPageCachingFilter</filter-name>
+		<url-pattern>/store/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>articleListPageCachingFilter</filter-name>
+		<url-pattern>/article/list/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>articleDetailPageCachingFilter</filter-name>
+		<url-pattern>/article/detail/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>productListPageCachingFilter</filter-name>
+		<url-pattern>/product/list</url-pattern>
+		<url-pattern>/product/list/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>productDetailPageCachingFilter</filter-name>
+		<url-pattern>/product/detail/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>brandListPageCachingFilter</filter-name>
+		<url-pattern>/brand/list/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>brandDetailPageCachingFilter</filter-name>
+		<url-pattern>/brand/detail/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>productCategoryPageCachingFilter</filter-name>
+		<url-pattern>/product_category</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>promotionDetailPageCachingFilter</filter-name>
+		<url-pattern>/promotion/detail/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>friendLinkPageCachingFilter</filter-name>
+		<url-pattern>/friend_link</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>consultationDetailPageCachingFilter</filter-name>
+		<url-pattern>/consultation/detail/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>reviewDetailPageCachingFilter</filter-name>
+		<url-pattern>/review/detail/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>areaPageCachingFilter</filter-name>
+		<url-pattern>/common/area</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>baseJsPageCachingFilter</filter-name>
+		<url-pattern>/resources/common/js/base.js</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>sitemapPageCachingFilter</filter-name>
+		<url-pattern>/sitemap/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>requestContextFilter</filter-name>
+		<url-pattern>/member/login</url-pattern>
+		<url-pattern>/member/logout</url-pattern>
+		<url-pattern>/business/login</url-pattern>
+		<url-pattern>/business/logout</url-pattern>
+		<url-pattern>/admin/login</url-pattern>
+		<url-pattern>/admin/logout</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>openEntityManagerInViewFilter</filter-name>
+		<url-pattern>/member/login</url-pattern>
+		<url-pattern>/member/logout</url-pattern>
+		<url-pattern>/business/login</url-pattern>
+		<url-pattern>/business/logout</url-pattern>
+		<url-pattern>/admin/login</url-pattern>
+		<url-pattern>/admin/logout</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>memberLoginCaptchaFilter</filter-name>
+		<url-pattern>/member/login</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>businessLoginCaptchaFilter</filter-name>
+		<url-pattern>/business/login</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>adminLoginCaptchaFilter</filter-name>
+		<url-pattern>/admin/login</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>shiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:/applicationContext-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.util.WebAppRootListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>net.sf.ehcache.constructs.web.ShutdownListener</listener-class>
+	</listener>
+
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/common/error/not_found</location>
+	</error-page>
+
+</web-app>

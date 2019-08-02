@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Index
+ * Version: 6.1
+ */
+
+/* ---------- index ---------- */
+.member main .icon {
+	display: block;
+}
+
+.member main .icon .iconfont {
+	display: block;
+	padding-bottom: 5px;
+	position: relative;
+	font-size: 25px;
+}
+
+.member main .icon .badge {
+	min-width: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 4px;
+	padding: 0px 5px;
+	position: absolute;
+	top: -2px;
+	left: 50%;
+	-webkit-animation: badgeEffect 0.4s both cubic-bezier(0.12, 0.4, 0.29, 1.46);
+	animation: badgeEffect 0.4s both cubic-bezier(0.12, 0.4, 0.29, 1.46);
+	background-color: #ee0000;
+}
+
+@-webkit-keyframes badgeEffect {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes badgeEffect {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}

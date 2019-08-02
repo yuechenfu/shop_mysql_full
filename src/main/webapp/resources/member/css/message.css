@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2008-2018 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Message
+ * Version: 6.1
+ */
+
+/* ---------- message ---------- */
+.message .message-detail .message-item {
+	margin-bottom: 15px;
+}
+
+.message .message-detail .popover {
+	max-width: 80%;
+	display: block;
+	position: relative;
+	z-index: auto;
+	word-break: break-all;
+}
+
+.message .message-detail .popover p {
+	line-height: 25px;
+}
+
+.message .message-detail .status {
+	position: absolute;
+	bottom: 0px;
+	left: -35px;
+}
